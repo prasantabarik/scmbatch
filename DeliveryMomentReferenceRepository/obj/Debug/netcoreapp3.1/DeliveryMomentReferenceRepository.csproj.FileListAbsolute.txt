@@ -10,3 +10,15 @@ C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceRe
 C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceRepository\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.dll
 C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceRepository\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.pdb
 C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceRepository\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.csproj.CopyComplete
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.deps.json
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.csprojAssemblyReference.cache
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.csproj.CoreCompileInputs.cache
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.AssemblyInfoInputs.cache
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.AssemblyInfo.cs
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.csproj.CopyComplete
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceRepository\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.pdb

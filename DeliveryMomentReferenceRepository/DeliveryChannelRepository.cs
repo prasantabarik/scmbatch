@@ -17,10 +17,12 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.ReferenceRepository
 
 
                 //READ  
-                var deliveryChannelsCollection = db.GetCollection<BsonDocument>("delivery-channel-new");
+                var deliveryChannelsCollection = db.GetCollection<BsonDocument>("delivery-channel");
               
                 var builder = Builders<BsonDocument>.Filter;
                 var filter = builder.Eq("storeNumber", storeId);
+           
+               //var filter = builder.And(builder.Eq("storeNumber", 7002), builder.Eq("deliveryStream", 1));
 
                 var deliveryChannels = deliveryChannelsCollection.Find(filter).ToList();
                

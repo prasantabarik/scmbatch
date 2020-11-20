@@ -1,0 +1,7 @@
+services:
+  deliverymomentmessagegenerator:
+    build:
+      context: C:\Nag\SCMMVP\Source\Repos\scmbatch
+      dockerfile: DeliveryMomentMessageGenerator/Dockerfile
+    image: deliverymomentmessagegenerator
+version: '3.4'

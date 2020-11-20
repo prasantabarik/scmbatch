@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "NE4pGqC9tW5v+1r29zvT/XDW6uji2zAEVgr6bqiDD7DcRThsX5xMkAkQb1orhMAtZsLiiySwH17QUEC5wR1oYQ==",
+  "dgSpecHash": "dGCSz/OHcetHrOPqBVJWqiAMvjE0tXZIVs0mJfXmCN/Xf8Horj0xx2aco4Q7yxZPmWJnyp0Od3rE8FuX/bMNug==",
   "success": true,
   "projectFilePath": "C:\\Nag\\SCMMVP\\Source\\Repos\\scmbatch\\DeliveryMomentMessageGenerator\\DeliveryMomentMessageGenerator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nagen\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\nagen\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\nagen\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\nagen\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
     "C:\\Users\\nagen\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\nagen\\.nuget\\packages\\mongodb.bson\\2.11.4\\mongodb.bson.2.11.4.nupkg.sha512",
     "C:\\Users\\nagen\\.nuget\\packages\\mongodb.driver\\2.11.4\\mongodb.driver.2.11.4.nupkg.sha512",

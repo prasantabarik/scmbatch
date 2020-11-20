@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  deliverymomentmessagegenerator:
+    image: ${DOCKER_REGISTRY-}deliverymomentmessagegenerator
+    build:
+      context: .
+      dockerfile: DeliveryMomentMessageGenerator/Dockerfile

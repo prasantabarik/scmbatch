@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DeliveryMomentMessageProcesser": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

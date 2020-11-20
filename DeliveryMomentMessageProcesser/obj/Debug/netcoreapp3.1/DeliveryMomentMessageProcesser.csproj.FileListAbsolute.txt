@@ -1,0 +1,12 @@
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.exe
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.deps.json
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.runtimeconfig.json
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.runtimeconfig.dev.json
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\obj\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.AssemblyInfoInputs.cache
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\obj\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.AssemblyInfo.cs
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\obj\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\obj\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\obj\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.genruntimeconfig.cache
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\obj\Debug\netcoreapp3.1\DeliveryMomentMessageProcesser.csproj.CoreCompileInputs.cache

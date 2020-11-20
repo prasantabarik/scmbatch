@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1lEEKvmW6OfjioRfgPdGhMXKXVALS0E3LZsoA1drAp0jjlNYJ3OA/i1d2c067Eyhhd77vMZ/riieyX6IXhxJAg==",
+  "success": true,
+  "projectFilePath": "C:\\Nag\\SCMMVP\\Source\\Repos\\scmbatch\\DeliveryMomentMessageProcesser\\DeliveryMomentMessageProcesser.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nagen\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512"
+  ],
+  "logs": []
+}
