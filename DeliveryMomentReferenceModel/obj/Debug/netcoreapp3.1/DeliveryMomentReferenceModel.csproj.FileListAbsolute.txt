@@ -1,0 +1,8 @@
+C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceModel\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.deps.json
+C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceModel\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.dll
+C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceModel\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.pdb
+C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.AssemblyInfoInputs.cache
+C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.AssemblyInfo.cs
+C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.dll
+C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.pdb
+C:\Nag\SCMCode\DeliveryMomentBatch\DeliveryMomentBatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.csproj.CoreCompileInputs.cache
