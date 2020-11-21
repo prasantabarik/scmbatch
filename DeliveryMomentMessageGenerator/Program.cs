@@ -17,20 +17,34 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
 
         private static void GenerateDeliveryMoments()
         {
-            //Generate delivery schdules for datetine.mow + 2 to next 42 days.
-            var deliveryMomentBatchDates = DateTimeUtilities.GetDeliveryMomentBatchDatesToRun();
-            //Get All the stores to process
-            var storeDocuments = DeliveryMomentServiceHelper.GetAllStores();
-            //Generate DeliveryMoments for each store
-            foreach (var storeDocument in storeDocuments)
+            try
             {
-                Console.WriteLine($"Start DeliveryMomentMessageGenerator for Store Number : {storeDocument.ToString()}");
-                string storeId = storeDocument.GetValue("storeId").ToString();
-                //Get logicstic channels for each store.
-                var logisticChannels = DeliveryMomentServiceHelper.GetLogisticChannels(storeId);
-                //Generate deliverymoments for each store
-                DeliveryMomentsGenerator.GenerateDeliveryMomentsByStore(storeDocument, deliveryMomentBatchDates, logisticChannels);
-                Console.WriteLine($"End DeliveryMomentMessageGenerator for Store Number : {storeDocument.ToString()}");
+                //Generate delivery schdules for datetine.mow + 2 to next 42 days.
+                var deliveryMomentBatchDates = DateTimeUtilities.GetDeliveryMomentBatchDatesToRun();
+                //Get All the stores to process
+                var storeDocuments = DeliveryMomentServiceHelper.GetAllStores();
+                //Generate DeliveryMoments for each store
+                foreach (var storeDocument in storeDocuments)
+                {
+                    try
+                    {
+                        Console.WriteLine($"Start GenerateDeliveryMoments for Store Number : {storeDocument.ToString()}");
+                        string storeId = storeDocument.GetValue("storeId").ToString();
+                        //Get logicstic channels for each store.
+                        var logisticChannels = DeliveryMomentServiceHelper.GetLogisticChannels(storeId);
+                        //Generate deliverymoments for each store
+                        DeliveryMomentsGenerator.GenerateDeliveryMomentsByStore(storeDocument, deliveryMomentBatchDates, logisticChannels);
+                        Console.WriteLine($"End GenerateDeliveryMoments for Store Number : {storeDocument.ToString()}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"End GenerateDeliveryMoments for Store : {storeDocument.ToString()} and exception ex: {ex.Message}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error for GenerateDeliveryMoments: {ex.Message} ");
             }
         }
     }
