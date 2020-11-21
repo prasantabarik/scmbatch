@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "XYblPqtc60EkHDYOvDj41+KxMMzx9x5nX6dsDhLUmwOTm97QERrYjQi0TEWVAfDC2hzwtESzANU4k+H01tFciA==",
+  "success": true,
+  "projectFilePath": "C:\\Nag\\SCMMVP\\Source\\Repos\\scmbatch\\DeliveryMomentMessageHandler\\DeliveryMomentMessageHandler.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nagen\\.nuget\\packages\\confluent.kafka\\1.5.2\\confluent.kafka.1.5.2.nupkg.sha512",
+    "C:\\Users\\nagen\\.nuget\\packages\\librdkafka.redist\\1.5.2\\librdkafka.redist.1.5.2.nupkg.sha512",
+    "C:\\Users\\nagen\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

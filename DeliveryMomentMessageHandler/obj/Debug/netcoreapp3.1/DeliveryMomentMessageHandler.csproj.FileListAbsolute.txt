@@ -1,0 +1,8 @@
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.deps.json
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.AssemblyInfoInputs.cache
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.AssemblyInfo.cs
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.csproj.CoreCompileInputs.cache
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.pdb
