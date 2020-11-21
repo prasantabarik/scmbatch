@@ -17,3 +17,6 @@ C:\Nag\SCMMVP\Source\Repos\scmbatch\bin\Debug\DeliveryMomentReferenceRepository.
 C:\Nag\SCMMVP\Source\Repos\scmbatch\obj\Debug\docker-compose.dcprojAssemblyReference.cache
 C:\Nag\SCMMVP\Source\Repos\scmbatch\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Nag\SCMMVP\Source\Repos\scmbatch\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Nag\SCMMVP\Source\Repos\scmbatch\bin\Debug\DeliveryMomentMessageHandler.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\bin\Debug\Confluent.Kafka.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\bin\Debug\DeliveryMomentMessageHandler.pdb

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGenerator
@@ -16,6 +17,28 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
             else
             {
                 newEndDate = Convert.ToDateTime(endDatetime).Date;
+            }
+            return newEndDate;
+        }
+
+        public static DateTime GetEndDateForLogisticChannel(string endDatetime)
+        {
+            DateTime newEndDate = DateTime.Now;
+            if (endDatetime == null || endDatetime == "null" || endDatetime == "BsonNull")
+            {
+                newEndDate = DateTime.Now.AddDays(42).Date;
+            }
+            else
+            {
+                try
+                {
+                    newEndDate = Convert.ToDateTime(endDatetime).Date;
+                }
+                catch (Exception ex)
+                {
+                    newEndDate = GetDate(endDatetime).Date;
+                }
+
             }
             return newEndDate;
         }
@@ -37,6 +60,33 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
             int daysToAdd = ((int)dayName - (int)dateTime.DayOfWeek + 7) % 7;
             return dateTime.AddDays(daysToAdd);
         }
+
+        public static DateTime GetDate(string strDateTime)
+        {
+            DateTime dateTime = DateTime.Now;
+            try
+            {
+                dateTime = Convert.ToDateTime(strDateTime).Date;
+            }
+            catch (Exception ex)
+            {
+                string newstrDateTime = strDateTime;
+                string[] dateValues = strDateTime.Split('-');
+                if (dateValues != null && dateValues.Count() > 2)
+                {
+                    string month = dateValues[1];
+                    if (month.Length == 1)
+                    {
+                        month = string.Concat("0", dateValues[1]);
+                    }
+                    newstrDateTime = $"{dateValues[0]}-{month}-{dateValues[2]}";
+                }
+                dateTime = DateTime.ParseExact(newstrDateTime, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            }
+            return dateTime;
+        }
+
+      
         public static string DayOfTheWeek(string weekCode)
         {
             string weekName = string.Empty;

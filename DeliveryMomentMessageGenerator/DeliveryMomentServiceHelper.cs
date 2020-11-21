@@ -26,18 +26,34 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
             DateTime deliveryScheduleDate)
         {
             string wharehouseNumber = string.Empty;
-            foreach (var logisticChannel in logisticChannels)
+            try
             {
-                if (deliveryStream.ToString() == logisticChannel.GetValue("deliveryStreamNumber").ToString())
+                Console.WriteLine($"Start GetWharehouseGroupNumber for Store Number : {storeId} and delivererNumber {deliveryStream}");
+                foreach (var logisticChannel in logisticChannels)
                 {
-                    var startDate = Convert.ToDateTime(logisticChannel.GetValue("startDate").ToString()).Date;
-                    var endDate = DateTimeUtilities.GetEndDate(logisticChannel.GetValue("endDate").ToString());
-                    if ((deliveryScheduleDate >= startDate) && (deliveryScheduleDate <= endDate))
+                    if (deliveryStream.ToString() == logisticChannel.GetValue("deliveryStream").ToString())
                     {
-                        wharehouseNumber = logisticChannel.GetValue("warehouseNumber").ToString();
-                        return wharehouseNumber;
+                        try
+                        {
+                            var startDate = DateTimeUtilities.GetDate(logisticChannel.GetValue("startDate").ToString()).Date;
+                            var endDate = DateTimeUtilities.GetEndDateForLogisticChannel(logisticChannel.GetValue("endDate").ToString());
+                            if ((deliveryScheduleDate >= startDate) && (deliveryScheduleDate <= endDate))
+                            {
+                                wharehouseNumber = logisticChannel.GetValue("warehouseNumber").ToString();
+                                return wharehouseNumber;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"GetWharehouseGroupNumber for Store Number : {storeId} and logisticChannel {logisticChannel.ToString()} with exception as {ex.Message}");
+                        }
                     }
                 }
+                Console.WriteLine($"End GetWharehouseGroupNumber for Store Number : {storeId} and delivererNumber {deliveryStream}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"GetWharehouseGroupNumber for Store Number : {storeId} and delivererNumber {deliveryStream} with exception as {ex.Message}");
             }
             return wharehouseNumber;
         }

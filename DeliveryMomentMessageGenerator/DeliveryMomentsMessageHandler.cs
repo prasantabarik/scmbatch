@@ -1,19 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models;
+using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandler;
+using System.Threading.Tasks;
 
-namespace DeliveryMomentMessageGenerator
+namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGenerator
 {
     class DeliveryMomentsMessageHandler
     {
-        public static void PublishMessages(List<DeliveryMomentModel> deliveryMoments)
+        public static async Task PublishMessages(List<DeliveryMomentModel> deliveryMoments)
         {
-            foreach (var deliveryMoment in deliveryMoments)
+            if (deliveryMoments != null && deliveryMoments.Count > 0)
             {
+                foreach (var deliveryMoment in deliveryMoments)
+                {
+                    try
+                    {
+                        var deliveryMomentAsString = DeliveryMomentSerializer.Serialize(deliveryMoment);
+                        DeliveryMomentConfluentMessageHandler deliveryMomentMessageHandler = new DeliveryMomentConfluentMessageHandler();
+                        await deliveryMomentMessageHandler.PublishDeliveryMomentMessage(deliveryMomentAsString);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error DeliveryMomentsMessageHandler for deliveryMoment : {deliveryMoment.Id} and exception ex: {ex.Message}");
+                    }
 
+                }
             }
 
         }
+
+       
     }
 }

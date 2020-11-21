@@ -10,13 +10,15 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
+            Console.WriteLine("Main() Start");
             GenerateDeliveryMoments();
-            Console.ReadLine();
+            Console.WriteLine("Main() End");
         }
 
         private static void GenerateDeliveryMoments()
         {
+            Console.WriteLine("GenerateDeliveryMoments() Start");
             try
             {
                 //Generate delivery schdules for datetine.mow + 2 to next 42 days.
@@ -38,7 +40,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"End GenerateDeliveryMoments for Store : {storeDocument.ToString()} and exception ex: {ex.Message}");
+                        Console.WriteLine($"GenerateDeliveryMoments for Store : {storeDocument.ToString()} and exception ex: {ex.Message}");
                     }
                 }
             }
@@ -46,6 +48,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
             {
                 Console.WriteLine($"Error for GenerateDeliveryMoments: {ex.Message} ");
             }
+            Console.WriteLine("GenerateDeliveryMoments() End");
         }
     }
 }

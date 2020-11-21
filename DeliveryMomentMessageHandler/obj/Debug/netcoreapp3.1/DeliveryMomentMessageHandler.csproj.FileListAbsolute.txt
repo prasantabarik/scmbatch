@@ -6,3 +6,4 @@ C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netco
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.csproj.CoreCompileInputs.cache
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.dll
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.csprojAssemblyReference.cache

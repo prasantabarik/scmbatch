@@ -25,6 +25,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                         TimeSpan onlyStartFillTime = DateTime.Parse(timeTable.StartTime).TimeOfDay;
 
                         var deliveryMoment = new DeliveryMomentModel();
+                        deliveryMoment.Id = GenerateDeliveryMomentId(storeNumber, deliveryDateTime, deliverySchedule.DeliveryStreamNumber);
                         deliveryMoment.StoreNumber = Convert.ToInt32(storeNumber);
                         deliveryMoment.StreamNumber = deliverySchedule.DeliveryStreamNumber;
 
@@ -53,11 +54,9 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                         deliveryMoment.TotalOrderQuantity = null;
                         deliveryMoment.MainDeliveryFlag = timeTable.MainDeliveryFlag;
 
-                        //Todo: Not present in timetable. Check with Vanchi
-                        deliveryMoment.StoreAdviseFlag = timeTable.StoreAdviseFlag;
+                        deliveryMoment.StoreAdviseFlag = "N";
                         deliveryMoment.DeliveryScheamaType = 1;
 
-                        //Todo: Check with Vanchi on StoreOrders multiple of array or single. If array how do we get it?
                         StoreOrder storeOrder = new StoreOrder();
                         storeOrder.WarehouseNumber = Convert.ToInt32(wharehouseNumber);
                         storeOrder.OrderNumber = GenerateRandomNumber();
@@ -65,7 +64,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                         deliveryMoment.StoreOrders = new List<StoreOrder>();
                         deliveryMoment.StoreOrders.Add(storeOrder);
                         deliveryMoments.Add(deliveryMoment);
-
+                        deliveryMoment.LogisticGroupExclusion = new List<int>();
                         if (timeTable.Exclusion != null && timeTable.Exclusion.Count > 0)
                         {
                             foreach (var exclusion in timeTable.Exclusion)
@@ -86,6 +85,11 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
             Random random = new Random();
             int num = random.Next(1000, int.MaxValue);
             return num;
+        }
+
+        private static string GenerateDeliveryMomentId(string storeId, DateTime deliveryDate, int deliveryStream )
+        {
+            return string.Concat(storeId, deliveryDate.ToString(), deliveryStream.ToString());
         }
     }
 }

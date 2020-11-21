@@ -5,6 +5,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 {
     public class DeliveryMomentModel
     {
+        public string Id { get; set; }
         public int StoreNumber { get; set; }
         public int StreamNumber { get; set; }
         public DateTime DeliveryDateTime { get; set; }

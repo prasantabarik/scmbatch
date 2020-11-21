@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandler
 {
-    public class DeliveryMomentMessageHandler
+    public class DeliveryMomentConfluentMessageHandler
     {
-        public static async Task PublishDeliveryMomentMessage(string message)
+        public async Task PublishDeliveryMomentMessage(string message)
         {
             Console.WriteLine("Start DeliveryMomentMessageHandler.PublishDeliveryMomentMessage()");
 
