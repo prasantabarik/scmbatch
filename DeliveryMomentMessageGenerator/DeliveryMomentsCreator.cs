@@ -89,7 +89,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
 
         private static string GenerateDeliveryMomentId(string storeId, DateTime deliveryDate, int deliveryStream )
         {
-            return string.Concat(storeId, deliveryDate.ToString(), deliveryStream.ToString());
+            return string.Concat(storeId, deliveryDate.ToString("yyyy-MM-dd"), deliveryStream.ToString());
         }
     }
 }
