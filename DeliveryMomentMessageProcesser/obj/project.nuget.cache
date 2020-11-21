@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "1lEEKvmW6OfjioRfgPdGhMXKXVALS0E3LZsoA1drAp0jjlNYJ3OA/i1d2c067Eyhhd77vMZ/riieyX6IXhxJAg==",
+  "dgSpecHash": "NiZvMEmUHDsY/ahSgflzyAUpWC+PXCZaok1c0QWiaOZ8RtVmt1IRrMKn8vR1KqXEfU7OTjiaXtigxduAnvoNuQ==",
   "success": true,
   "projectFilePath": "C:\\Nag\\SCMMVP\\Source\\Repos\\scmbatch\\DeliveryMomentMessageProcesser\\DeliveryMomentMessageProcesser.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\nagen\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512"
+    "C:\\Users\\nagen\\.nuget\\packages\\confluent.kafka\\1.5.2\\confluent.kafka.1.5.2.nupkg.sha512",
+    "C:\\Users\\nagen\\.nuget\\packages\\librdkafka.redist\\1.5.2\\librdkafka.redist.1.5.2.nupkg.sha512",
+    "C:\\Users\\nagen\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
+    "C:\\Users\\nagen\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
