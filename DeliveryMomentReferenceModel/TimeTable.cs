@@ -29,18 +29,21 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
         public int BoxSize { get; set; }
 
         [JsonPropertyName("initialDeliveryFlag")]
-        public string initialDeliveryFlag { get; set; }
+        public string InitialDeliveryFlag { get; set; }
 
         [JsonPropertyName("mainDeliveryFlag")]
-        public string mainDeliveryFlag { get; set; }
+        public string MainDeliveryFlag { get; set; }
 
         [JsonPropertyName("startDay")]
-        public string startDay { get; set; }
+        public string StartDay { get; set; }
 
         [JsonPropertyName("startTime")]
-        public string startTime { get; set; }
+        public string StartTime { get; set; }
 
         [JsonPropertyName("exclusion")]
         public List<Exclusion> Exclusion { get; set; }
+
+        [JsonPropertyName("storeAdviseFlag")]
+        public string StoreAdviseFlag { get; set; }
     }
 }
