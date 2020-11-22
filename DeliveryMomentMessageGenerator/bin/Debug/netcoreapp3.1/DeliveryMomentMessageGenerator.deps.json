@@ -878,7 +878,9 @@
       },
       "DeliveryMomentMessageHandler/1.0.0": {
         "dependencies": {
-          "Confluent.Kafka": "1.5.2"
+          "Confluent.Kafka": "1.5.2",
+          "DeliveryMomentReferenceRepository": "1.0.0",
+          "DeliveryMomentReferenceServices": "1.0.0"
         },
         "runtime": {
           "DeliveryMomentMessageHandler.dll": {}
@@ -886,7 +888,8 @@
       },
       "DeliveryMomentReferenceModel/1.0.0": {
         "dependencies": {
-          "MongoDB.Driver": "2.11.4"
+          "MongoDB.Driver": "2.11.4",
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "DeliveryMomentReferenceModel.dll": {}

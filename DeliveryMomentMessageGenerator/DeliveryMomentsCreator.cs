@@ -72,6 +72,10 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                                 deliveryMoment.LogisticGroupExclusion.Add(exclusion.LogisticGroupNumber);
                             }
                         }
+                        deliveryMoment.CreatedBy = "DeliveryMomentBatch";
+                        deliveryMoment.UpdatedBy = "DeliveryMomentBatch";
+                        deliveryMoment.CreationDateTime = DateTime.Now.ToString();
+                        deliveryMoment.UpdateDateTime = DateTime.Now.ToString();
                     }
                 }
             }

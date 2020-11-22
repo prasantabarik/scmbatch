@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DeliveryMomentMessageHandler\DeliveryMomentMessageHandler.csproj" />
+    <ProjectReference Include="..\DeliveryMomentReferenceServices\DeliveryMomentReferenceServices.csproj" />
   </ItemGroup>
 
 </Project>

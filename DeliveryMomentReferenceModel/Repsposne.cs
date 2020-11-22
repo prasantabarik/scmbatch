@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 {
-    public class Repsposne
+    public class Repsponse
     {
         [JsonPropertyName("responseCode")]
         public string ResponseCode { get; set; }
@@ -15,6 +15,19 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 
         [JsonPropertyName("response")]
         public List<DeliverySchedule> Response { get; set; }
+
+    }
+
+    public class DeliveryMomentRepsponse
+    {
+        [JsonPropertyName("responseCode")]
+        public string ResponseCode { get; set; }
+
+        [JsonPropertyName("responseDescription")]
+        public string ResponseDescription { get; set; }
+
+        [JsonPropertyName("response")]
+        public List<DeliveryMomentModel> Response { get; set; }
 
     }
 }

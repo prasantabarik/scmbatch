@@ -773,7 +773,8 @@
       },
       "DeliveryMomentReferenceModel/1.0.0": {
         "dependencies": {
-          "MongoDB.Driver": "2.11.4"
+          "MongoDB.Driver": "2.11.4",
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "DeliveryMomentReferenceModel.dll": {}

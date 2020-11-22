@@ -1,8 +1,11 @@
 ﻿using Confluent.Kafka;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentReferenceServices;
+using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models;
 
 namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandlerr
 {
@@ -101,7 +104,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandl
                         }
 
                         Console.WriteLine($"Received message at {consumeResult.TopicPartitionOffset}: {consumeResult.Message.Value}");
-
+                        SaveDeliveryMoment(consumeResult.Message.Value);
                         if (consumeResult.Offset % commitPeriod == 0)
                         {
                             // The Commit method sends a "commit offsets" request to the Kafka
@@ -131,6 +134,39 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandl
                 Console.WriteLine("Closing consumer.");
                 consumer.Close();
             }
+        }
+
+
+        private static void SaveDeliveryMoment(string deliveryMomentMessage)
+        {
+            try
+            {
+                var deliveryMomentModel = Deserialize(deliveryMomentMessage);
+                if (deliveryMomentModel != null)
+                {
+                    DeliveryMomentService deliveryMomentService = new DeliveryMomentService();
+                    deliveryMomentService.SaveDeliveryMomentAsync(deliveryMomentModel);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"DeliveryMomentConfluentMessageListner.Deserialize() Exception {ex.Message} for {deliveryMomentMessage}");
+            }
+        }
+
+        private static DeliveryMomentModel Deserialize(string messageStream)
+        {
+            DeliveryMomentModel deliveryMomentModel = null;
+            try
+            {
+               deliveryMomentModel = JsonConvert.DeserializeObject<DeliveryMomentModel>(messageStream);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"DeliveryMomentConfluentMessageListner.Deserialize() Exception {ex.Message}");
+            }
+
+            return deliveryMomentModel;
         }
     }
 }

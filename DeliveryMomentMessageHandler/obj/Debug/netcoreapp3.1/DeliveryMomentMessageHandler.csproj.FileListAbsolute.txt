@@ -7,3 +7,10 @@ C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netco
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.dll
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.pdb
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.csprojAssemblyReference.cache
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceServices.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceServices.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.csproj.CopyComplete
