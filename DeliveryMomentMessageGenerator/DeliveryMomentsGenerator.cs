@@ -113,6 +113,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
         private static void GenerateDeliveryMomentsByDeliverer(string storeId, List<BsonDocument> logisticChannels,
              DateTime date, DeliverySchedule deliverySchedule, string delivererNumber)
         {
+
             try
             {
                 Console.WriteLine($"Start GenerateDeliveryMomentsByDeliverer for Store Number : {storeId} with date {date} and delivererNumber {delivererNumber}");

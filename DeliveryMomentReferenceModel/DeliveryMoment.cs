@@ -82,7 +82,10 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 
     public class StoreOrder
     {
-        public int OrderNumber { get; set; }
-        public int WarehouseNumber { get; set; }
+		[JsonProperty("orderNumber")]
+		public int OrderNumber { get; set; }
+
+		[JsonProperty("warehouseNumber")]
+		public int WarehouseNumber { get; set; }
     }
 }

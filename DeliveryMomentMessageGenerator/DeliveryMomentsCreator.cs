@@ -57,16 +57,18 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                         deliveryMoment.StoreAdviseFlag = "N";
                         deliveryMoment.DeliveryScheamaType = 1;
 
-                        StoreOrder storeOrder = new StoreOrder();
-                        storeOrder.WarehouseNumber = Convert.ToInt32(wharehouseNumber);
-                        storeOrder.OrderNumber = GenerateRandomNumber();
-
-                        deliveryMoment.StoreOrders = new List<StoreOrder>();
-                        deliveryMoment.StoreOrders.Add(storeOrder);
-                        deliveryMoments.Add(deliveryMoment);
-                        deliveryMoment.LogisticGroupExclusion = new List<int>();
+                        if (!string.IsNullOrEmpty(wharehouseNumber))
+                        {
+                            StoreOrder storeOrder = new StoreOrder();
+                            storeOrder.WarehouseNumber = Convert.ToInt32(wharehouseNumber);
+                            storeOrder.OrderNumber = GenerateRandomNumber();
+                            deliveryMoment.StoreOrders = new List<StoreOrder>();
+                            deliveryMoment.StoreOrders.Add(storeOrder);
+                        }
+                        deliveryMoments.Add(deliveryMoment);               
                         if (timeTable.Exclusion != null && timeTable.Exclusion.Count > 0)
                         {
+                            deliveryMoment.LogisticGroupExclusion = new List<int>();
                             foreach (var exclusion in timeTable.Exclusion)
                             {
                                 deliveryMoment.LogisticGroupExclusion.Add(exclusion.LogisticGroupNumber);
