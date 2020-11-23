@@ -13,5 +13,5 @@ C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceModel\obj\Debug\netco
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.AssemblyInfo.cs
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.dll
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.pdb
-C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.csprojAssemblyReference.cache
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.csproj.CoreCompileInputs.cache
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentReferenceModel\obj\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.csprojAssemblyReference.cache

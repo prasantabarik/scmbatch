@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -20,13 +21,13 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 
     public class DeliveryMomentRepsponse
     {
-        [JsonPropertyName("responseCode")]
+        [JsonProperty("responseCode")]
         public string ResponseCode { get; set; }
 
-        [JsonPropertyName("responseDescription")]
+        [JsonProperty("responseDescription")]
         public string ResponseDescription { get; set; }
 
-        [JsonPropertyName("response")]
+        [JsonProperty("response")]
         public List<DeliveryMomentModel> Response { get; set; }
 
     }

@@ -23,10 +23,10 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 		public string SchemaName { get; set; }
 
 		[JsonProperty("deliveryDateTime")]
-		public DateTime DeliveryDateTime { get; set; }
+		public string DeliveryDateTime { get; set; }
 
 		[JsonProperty("orderDateTime")]
-		public DateTime OrderDateTime { get; set; }
+		public string OrderDateTime { get; set; }
 
 		[JsonProperty("initialPromotionFlag")]
 		public string InitialPromotionFlag { get; set; }
@@ -44,7 +44,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 		public int BoxSzie { get; set; }
 
 		[JsonProperty("fillDateTime")]
-		public DateTime FillDateTime { get; set; }
+		public string FillDateTime { get; set; }
 
 		[JsonProperty("mainDeliveryFlag")]
 		public string MainDeliveryFlag { get; set; }
@@ -53,16 +53,16 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 		public string StoreAdviseFlag { get; set; }
 
 		[JsonProperty("deliverySchemaType")]
-		public int DeliveryScheamaType { get; set; }
+		public int? DeliveryScheamaType { get; set; }
 
 		[JsonProperty("delivererNumber")]
 		public int DelivererNumber { get; set; }
 
 		[JsonProperty("startFillTime")]
-		public DateTime StartFillDateTime { get; set; }
+		public string StartFillDateTime { get; set; }
 
 		[JsonProperty("logisticGroupExclusion")]
-		public List<int> LogisticGroupExclusion { get; set; }
+		public List<LogisticGroup> LogisticGroupExclusion { get; set; }
 
 		[JsonProperty("storeOrder")]
 		public List<StoreOrder> StoreOrders { get; set; }
@@ -78,6 +78,10 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 
 		[JsonProperty("updateDateTime")]
 		public string UpdateDateTime { get; set; }
+
+		
+
+		
 	}
 
     public class StoreOrder
@@ -88,4 +92,11 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models
 		[JsonProperty("warehouseNumber")]
 		public int WarehouseNumber { get; set; }
     }
+
+	public class LogisticGroup
+	{
+		[JsonProperty("logisticGroupNumber")]
+		public int LogisticGroupNumber { get; set; }
+
+	}
 }

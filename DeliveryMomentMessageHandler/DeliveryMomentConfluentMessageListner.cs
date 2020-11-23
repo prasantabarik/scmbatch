@@ -17,7 +17,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandl
             var brokerList = "pkc-lq8gm.westeurope.azure.confluent.cloud:9092";
             var topics = new List<string>();
             //topics.Add("DeliveryMomentProcessor");
-            topics.Add("DeliveryMomentMessageProcesser");
+            topics.Add("DeliveryMomentMessageProcesser-Dev");
 
             Console.WriteLine($"Started consumer, Ctrl-C to stop consuming");
 
@@ -37,7 +37,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandl
             var config = new ConsumerConfig
             {
                 BootstrapServers = brokerList,
-                GroupId = "mvp-batch-consumer",
+                GroupId = "mvp-batch-consumer-dev",
                 EnableAutoCommit = false,
                 SecurityProtocol = SecurityProtocol.SaslSsl,
                 SaslMechanism = SaslMechanism.Plain,
@@ -145,7 +145,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandl
                 if (deliveryMomentModel != null)
                 {
                     DeliveryMomentService deliveryMomentService = new DeliveryMomentService();
-                    deliveryMomentService.SaveDeliveryMomentAsync(deliveryMomentModel);
+                    deliveryMomentService.Save(deliveryMomentModel);
                 }
             }
             catch (Exception ex)

@@ -10,7 +10,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
     class DeliveryMomentsGenerator
     {
         public static void GenerateDeliveryMomentsByStore(BsonDocument storeDocument, List<DateTime> deliveryMomentBatchDates,
-           List<BsonDocument> logisticChannels)
+           List<BsonDocument> logisticChannels, List<BsonDocument> deliveryStreamDocuments)
         {
             try
             {
@@ -25,7 +25,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                     var deliveryShedulesFinal = new List<DeliverySchedule>();
                     var deliverySchedules = deliveryScheduleResponse.Response;
 
-                    GenerateDeliveryMomentsFromDeliverySchedules(storeId, deliveryMomentBatchDates, logisticChannels, deliverySchedules, deliveryChannels);
+                    GenerateDeliveryMomentsFromDeliverySchedules(storeId, deliveryMomentBatchDates, logisticChannels, deliverySchedules, deliveryChannels, deliveryStreamDocuments);
                 }
                 Console.WriteLine($"End GenerateDeliveryMomentsByStore for Store Number : {storeDocument.ToString()}");
             }
@@ -36,7 +36,8 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
         }
 
         private static void GenerateDeliveryMomentsFromDeliverySchedules(string storeId, List<DateTime> deliveryMomentBatchDates,
-           List<BsonDocument> logisticChannels, List<DeliverySchedule> deliverySchedules, List<BsonDocument> deliveryChannels)
+           List<BsonDocument> logisticChannels, List<DeliverySchedule> deliverySchedules, 
+           List<BsonDocument> deliveryChannels, List<BsonDocument> deliveryStreamDocuments)
         {
             try
             {
@@ -45,7 +46,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                 {
                     if (deliverySchedule.TimeTable != null && deliverySchedule.TimeTable.Count > 0)
                     {
-                        GenerateDeliveryMomentsFromDeliverySchedule(storeId, deliveryMomentBatchDates, logisticChannels, deliverySchedule, deliveryChannels);
+                        GenerateDeliveryMomentsFromDeliverySchedule(storeId, deliveryMomentBatchDates, logisticChannels, deliverySchedule, deliveryChannels, deliveryStreamDocuments);
                     }
                     else
                     {
@@ -61,7 +62,8 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
         }
 
         private static void GenerateDeliveryMomentsFromDeliverySchedule(string storeId, List<DateTime> deliveryMomentBatchDates,
-         List<BsonDocument> logisticChannels, DeliverySchedule deliverySchedule, List<BsonDocument> deliveryChannels)
+         List<BsonDocument> logisticChannels, DeliverySchedule deliverySchedule, 
+         List<BsonDocument> deliveryChannels, List<BsonDocument> deliveryStreamDocuments)
         {
             try
             {
@@ -74,7 +76,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                 {
                     if ((date >= startDate) && (date <= endDate))
                     {
-                        GenerateDeliveryMomentsByDeliveryScheduleDates(storeId, logisticChannels, startDate, endDate, date, deliverySchedule, deliveryChannels);
+                        GenerateDeliveryMomentsByDeliveryScheduleDates(storeId, logisticChannels, startDate, endDate, date, deliverySchedule, deliveryChannels, deliveryStreamDocuments);
                     }
                 }
                 Console.WriteLine($"End GenerateDeliveryMomentsFromDeliverySchedule for Store Number : {storeId} with startdate {deliverySchedule.StartDate} and enddate {deliverySchedule.EndDate}");
@@ -86,20 +88,20 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
         }
 
         private static void GenerateDeliveryMomentsByDeliveryScheduleDates(string storeId, List<BsonDocument> logisticChannels, DateTime startDate, 
-            DateTime endDate, DateTime date,  DeliverySchedule deliverySchedule, List<BsonDocument> deliveryChannels)
+            DateTime endDate, DateTime date,  DeliverySchedule deliverySchedule, List<BsonDocument> deliveryChannels,
+            List<BsonDocument> deliveryStreamDocuments)
         {
             try
             {
                 Console.WriteLine($"Start GenerateDeliveryMomentsByDeliveryScheduleDates for Store Number : {storeId} with startdate {startDate} and enddate {endDate}");
                 // Pass the store, date and stream to DeliveryChannel collection. Repeat for every store, date and stream
-                var delivererNumber = DeliveryMomentServiceHelper.GetDelivererNumber(storeId, deliveryChannels, deliverySchedule.DeliveryStreamNumber,
-                    deliverySchedule.DeliverySchemaType, date, startDate, endDate);
+                var delivererNumber = DeliveryMomentServiceHelper.GetDelivererNumber(storeId, deliveryChannels, deliverySchedule.DeliveryStreamNumber, date);
               
                
                 if (!string.IsNullOrEmpty(delivererNumber))
                 {
                     //For the record, identify the warehouse number to prepare StoreOrder section of DeliveryMoment document. 
-                    GenerateDeliveryMomentsByDeliverer(storeId, logisticChannels, date, deliverySchedule, delivererNumber);
+                    GenerateDeliveryMomentsByDeliverer(storeId, logisticChannels, date, deliverySchedule, delivererNumber, deliveryStreamDocuments);
                 }
 
                 Console.WriteLine($"End GenerateDeliveryMomentsByDeliveryScheduleDates for Store Number : {storeId} with startdate {startDate} and enddate {endDate}");
@@ -111,7 +113,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
         }
 
         private static void GenerateDeliveryMomentsByDeliverer(string storeId, List<BsonDocument> logisticChannels,
-             DateTime date, DeliverySchedule deliverySchedule, string delivererNumber)
+             DateTime date, DeliverySchedule deliverySchedule, string delivererNumber, List<BsonDocument> deliveryStreamDocuments)
         {
 
             try
@@ -120,9 +122,10 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                 //For the record, identify the warehouse number to prepare StoreOrder section of DeliveryMoment document. 
                 var wharehouseNumber = DeliveryMomentServiceHelper.GetWharehouseGroupNumber(storeId, logisticChannels, deliverySchedule.DeliveryStreamNumber, date);
 
+                var deliveryStreamName = DeliveryMomentServiceHelper.GetDeliveryStreamName(deliveryStreamDocuments, deliverySchedule.DeliveryStreamNumber);
                 if (!string.IsNullOrEmpty(wharehouseNumber) && wharehouseNumber != "null")
                 {
-                    var deliveryMoments = DeliveryMomentsCreator.PrepareDeliveryMoments(storeId, deliverySchedule, date, delivererNumber, wharehouseNumber);
+                    var deliveryMoments = DeliveryMomentsCreator.PrepareDeliveryMoments(storeId, deliverySchedule, date, delivererNumber, wharehouseNumber, deliveryStreamName);
                     DeliveryMomentsMessageHandler.PublishMessages(deliveryMoments);
                 }
                 Console.WriteLine($"End GenerateDeliveryMomentsByDeliverer for Store Number : {storeId} with date {date} and delivererNumber {delivererNumber}");

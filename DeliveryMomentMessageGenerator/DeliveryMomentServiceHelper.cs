@@ -1,4 +1,6 @@
-﻿using MongoDB.Bson;
+﻿using DeliveryMomentReferenceRepository;
+using MongoDB.Bson;
+using MongoDB.Driver.Core.Operations;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -64,8 +66,36 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
             return storeDocuments;
         }
 
-        public static string GetDelivererNumber(string storeId, List<BsonDocument> deliveryChannels, int deliveryStreamNumber,
-            int deliverySchemaType, DateTime currentDate, DateTime startDate, DateTime endDate)
+        public static List<BsonDocument> GetAllDeliveryStreams()
+        {
+            DeliveryStreamRepository deliveryStreamRepository = new DeliveryStreamRepository();
+            var deliveryStreams = deliveryStreamRepository.GetDeliveryStreams();
+            return deliveryStreams;
+        }
+
+        public static string GetDeliveryStreamName(List<BsonDocument> deliveryStreams, int deliveryStreamNumber)
+        {
+            string deliveryStreamName = "HOUDBAAR";
+            try
+            {
+                foreach (var deliveryStream in deliveryStreams)
+                {
+                    var deliveryStreamNo = Convert.ToInt32(deliveryStream.GetValue("deliveryStreamNumber", 1));
+                    if (deliveryStreamNo == deliveryStreamNumber)
+                    {
+                        deliveryStreamName = deliveryStream.GetValue("deliveryStreamName", "HOUDBAAR").ToString();
+                        return deliveryStreamName;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+                return deliveryStreamName;
+        }
+
+        public static string GetDelivererNumber(string storeId, List<BsonDocument> deliveryChannels, int deliveryStreamNumber, DateTime currentDate)
         {
             foreach (var deliveryChannel in deliveryChannels)
             {
@@ -89,7 +119,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                     }
                     catch (Exception ex)
                     {
-
+                        Console.WriteLine($"GetDelivererNumber exception for store {storeId} , and deliveryStreamNumber {deliveryStreamNumber.ToString()} with ex: {ex.Message} ");
                     }
                 }
 

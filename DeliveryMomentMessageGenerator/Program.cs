@@ -25,6 +25,10 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                 var deliveryMomentBatchDates = DateTimeUtilities.GetDeliveryMomentBatchDatesToRun();
                 //Get All the stores to process
                 var storeDocuments = DeliveryMomentServiceHelper.GetAllStores();
+
+                //Get All the stores to process
+                var deliveryStreamDocuments = DeliveryMomentServiceHelper.GetAllDeliveryStreams();
+
                 //Generate DeliveryMoments for each store
                 foreach (var storeDocument in storeDocuments)
                 {
@@ -32,11 +36,15 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                     {
                         Console.WriteLine($"Start GenerateDeliveryMoments for Store Number : {storeDocument.ToString()}");
                         string storeId = storeDocument.GetValue("storeId").ToString();
-                        //Get logicstic channels for each store.
-                        var logisticChannels = DeliveryMomentServiceHelper.GetLogisticChannels(storeId);
-                        //Generate deliverymoments for each store
-                        DeliveryMomentsGenerator.GenerateDeliveryMomentsByStore(storeDocument, deliveryMomentBatchDates, logisticChannels);
-                        Console.WriteLine($"End GenerateDeliveryMoments for Store Number : {storeDocument.ToString()}");
+                        //Todo: Need to change
+                        if (storeId == "7010")
+                        {
+                            //Get logicstic channels for each store.
+                            var logisticChannels = DeliveryMomentServiceHelper.GetLogisticChannels(storeId);
+                            //Generate deliverymoments for each store
+                            DeliveryMomentsGenerator.GenerateDeliveryMomentsByStore(storeDocument, deliveryMomentBatchDates, logisticChannels, deliveryStreamDocuments);
+                            Console.WriteLine($"End GenerateDeliveryMoments for Store Number : {storeDocument.ToString()}");
+                        }
                     }
                     catch (Exception ex)
                     {
