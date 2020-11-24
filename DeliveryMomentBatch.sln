@@ -17,6 +17,10 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryMomentMessageHandler", "DeliveryMomentMessageHandler\DeliveryMomentMessageHandler.csproj", "{7ABDDA1B-9739-492D-A1A8-651995976B5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonogoDbClient", "MonogoDbClient\MonogoDbClient.csproj", "{A21F1CAE-2E54-45B3-AE2A-CF93E082C800}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtilities", "CommonUtilities\CommonUtilities.csproj", "{D529C9E4-097F-439D-AB91-E71759FE0632}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{7ABDDA1B-9739-492D-A1A8-651995976B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ABDDA1B-9739-492D-A1A8-651995976B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ABDDA1B-9739-492D-A1A8-651995976B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21F1CAE-2E54-45B3-AE2A-CF93E082C800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21F1CAE-2E54-45B3-AE2A-CF93E082C800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21F1CAE-2E54-45B3-AE2A-CF93E082C800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21F1CAE-2E54-45B3-AE2A-CF93E082C800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D529C9E4-097F-439D-AB91-E71759FE0632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D529C9E4-097F-439D-AB91-E71759FE0632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D529C9E4-097F-439D-AB91-E71759FE0632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D529C9E4-097F-439D-AB91-E71759FE0632}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

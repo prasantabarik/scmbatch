@@ -48,3 +48,5 @@ C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\net
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.pdb
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.dll
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceRepository.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\CommonUtilities.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageProcesser\bin\Debug\netcoreapp3.1\CommonUtilities.pdb

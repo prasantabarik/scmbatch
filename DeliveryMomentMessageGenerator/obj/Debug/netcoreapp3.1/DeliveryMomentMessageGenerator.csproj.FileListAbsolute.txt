@@ -78,3 +78,5 @@ C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageGenerator\bin\Debug\net
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageGenerator\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\zlib.dll
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageGenerator\bin\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.dll
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageGenerator\bin\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageGenerator\bin\Debug\netcoreapp3.1\CommonUtilities.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageGenerator\bin\Debug\netcoreapp3.1\CommonUtilities.pdb

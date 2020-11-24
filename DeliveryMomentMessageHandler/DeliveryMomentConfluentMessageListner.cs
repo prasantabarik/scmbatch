@@ -17,7 +17,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandl
             var brokerList = "pkc-lq8gm.westeurope.azure.confluent.cloud:9092";
             var topics = new List<string>();
             //topics.Add("DeliveryMomentProcessor");
-            topics.Add("DeliveryMomentMessageProcesser-Dev");
+            topics.Add("DeliveryMomentMessageProcesser");
 
             Console.WriteLine($"Started consumer, Ctrl-C to stop consuming");
 

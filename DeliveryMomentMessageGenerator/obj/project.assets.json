@@ -1424,10 +1424,21 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "CommonUtilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/CommonUtilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonUtilities.dll": {}
+        }
+      },
       "DeliveryMomentMessageHandler/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "CommonUtilities": "1.0.0",
           "Confluent.Kafka": "1.5.2",
           "DeliveryMomentReferenceRepository": "1.0.0",
           "DeliveryMomentReferenceServices": "1.0.0"
@@ -5149,6 +5160,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "CommonUtilities/1.0.0": {
+      "type": "project",
+      "path": "../CommonUtilities/CommonUtilities.csproj",
+      "msbuildProject": "../CommonUtilities/CommonUtilities.csproj"
+    },
     "DeliveryMomentMessageHandler/1.0.0": {
       "type": "project",
       "path": "../DeliveryMomentMessageHandler/DeliveryMomentMessageHandler.csproj",
@@ -5172,6 +5188,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "CommonUtilities >= 1.0.0",
       "DeliveryMomentMessageHandler >= 1.0.0",
       "DeliveryMomentReferenceRepository >= 1.0.0",
       "DeliveryMomentReferenceServices >= 1.0.0",
@@ -5204,6 +5221,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Nag\\SCMMVP\\Source\\Repos\\scmbatch\\CommonUtilities\\CommonUtilities.csproj": {
+              "projectPath": "C:\\Nag\\SCMMVP\\Source\\Repos\\scmbatch\\CommonUtilities\\CommonUtilities.csproj"
+            },
             "C:\\Nag\\SCMMVP\\Source\\Repos\\scmbatch\\DeliveryMomentMessageHandler\\DeliveryMomentMessageHandler.csproj": {
               "projectPath": "C:\\Nag\\SCMMVP\\Source\\Repos\\scmbatch\\DeliveryMomentMessageHandler\\DeliveryMomentMessageHandler.csproj"
             },

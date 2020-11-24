@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CommonUtilities\CommonUtilities.csproj" />
     <ProjectReference Include="..\DeliveryMomentReferenceRepository\DeliveryMomentReferenceRepository.csproj" />
     <ProjectReference Include="..\DeliveryMomentReferenceServices\DeliveryMomentReferenceServices.csproj" />
   </ItemGroup>

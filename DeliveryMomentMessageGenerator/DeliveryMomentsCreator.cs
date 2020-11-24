@@ -39,10 +39,10 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                         var orderDateTime = deliveryDateTime;
                         orderDateTime = DateTimeUtilities.GetNextDateTimeFromDayCode(orderDateTime, timeTable.OrderDay).AddDays(-7);
 
-                        deliveryMoment.OrderDateTime = orderDateTime.Add(onlyOrderTime).ToString(dateTimeFormat); ;
+                        deliveryMoment.OrderDateTime = orderDateTime.Add(onlyOrderTime).ToString(dateTimeFormat);
 
                         var startFillDateTime = deliveryDateTime;
-                        startFillDateTime = DateTimeUtilities.GetNextDateTimeFromDayCode(startFillDateTime, timeTable.StartDay).AddDays(-7);
+                        startFillDateTime = DateTimeUtilities.GetNextDateTimeFromDayCode(startFillDateTime, timeTable.StartDay);
 
                         deliveryMoment.StartFillDateTime = startFillDateTime.Add(onlyStartFillTime).ToString(dateTimeFormat);
 

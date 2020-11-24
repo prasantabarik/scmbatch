@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DeliveryMomentReferenceRepository
+namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.ReferenceRepository
 {
    public class DeliveryStreamRepository
     {

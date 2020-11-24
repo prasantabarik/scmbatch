@@ -20,3 +20,5 @@ C:\Nag\SCMMVP\Source\Repos\scmbatch\obj\Debug\docker-compose.dcproj.CopyComplete
 C:\Nag\SCMMVP\Source\Repos\scmbatch\bin\Debug\DeliveryMomentMessageHandler.dll
 C:\Nag\SCMMVP\Source\Repos\scmbatch\bin\Debug\Confluent.Kafka.dll
 C:\Nag\SCMMVP\Source\Repos\scmbatch\bin\Debug\DeliveryMomentMessageHandler.pdb
+C:\Nag\SCMMVP\Source\Repos\scmbatch\bin\Debug\CommonUtilities.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\bin\Debug\CommonUtilities.pdb

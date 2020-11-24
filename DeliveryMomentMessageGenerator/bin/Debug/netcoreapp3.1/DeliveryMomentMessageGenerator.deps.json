@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "DeliveryMomentMessageGenerator/1.0.0": {
         "dependencies": {
+          "CommonUtilities": "1.0.0",
           "DeliveryMomentMessageHandler": "1.0.0",
           "DeliveryMomentReferenceRepository": "1.0.0",
           "DeliveryMomentReferenceServices": "1.0.0",
@@ -876,8 +877,14 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "CommonUtilities/1.0.0": {
+        "runtime": {
+          "CommonUtilities.dll": {}
+        }
+      },
       "DeliveryMomentMessageHandler/1.0.0": {
         "dependencies": {
+          "CommonUtilities": "1.0.0",
           "Confluent.Kafka": "1.5.2",
           "DeliveryMomentReferenceRepository": "1.0.0",
           "DeliveryMomentReferenceServices": "1.0.0"
@@ -1523,6 +1530,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "CommonUtilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "DeliveryMomentMessageHandler/1.0.0": {
       "type": "project",

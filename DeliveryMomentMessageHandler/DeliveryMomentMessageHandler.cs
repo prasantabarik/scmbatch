@@ -1,19 +1,20 @@
 ﻿using Confluent.Kafka;
 using System;
 using System.Threading.Tasks;
+using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.CommonUtilities;
 
 namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandler
 {
     public class DeliveryMomentConfluentMessageHandler
     {
-        public async Task PublishDeliveryMomentMessage(string message)
+        public void PublishDeliveryMomentMessage(string message)
         {
             Console.WriteLine("Start DeliveryMomentMessageHandler.PublishDeliveryMomentMessage()");
 
             try
             {
                 string brokerList = "pkc-lq8gm.westeurope.azure.confluent.cloud:9092";
-                string topicName = "DeliveryMomentMessageProcesser-Dev";
+                string topicName = "DeliveryMomentMessageProcesser";
                 var config = new ProducerConfig { BootstrapServers = brokerList };
                 config.SecurityProtocol = SecurityProtocol.SaslSsl;
                 config.SaslMechanism = SaslMechanism.Plain;
@@ -24,9 +25,11 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandl
                     try
                     {
                         Guid guid = Guid.NewGuid();
+
+                        var deliveryReport = deliveryMomentProducer.ProduceAsync(
+                            topicName, new Message<string, string> { Key = guid.ToString(), Value = message }).Result;
+
                         
-                        var deliveryReport = await deliveryMomentProducer.ProduceAsync(
-                            topicName, new Message<string, string> { Key = guid.ToString(), Value = message });
 
                         Console.WriteLine($" mesage: {guid} is delivered to: {deliveryReport.TopicPartitionOffset}");
                     }

@@ -14,3 +14,5 @@ C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netco
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceServices.pdb
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\DeliveryMomentReferenceModel.pdb
 C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\obj\Debug\netcoreapp3.1\DeliveryMomentMessageHandler.csproj.CopyComplete
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\CommonUtilities.dll
+C:\Nag\SCMMVP\Source\Repos\scmbatch\DeliveryMomentMessageHandler\bin\Debug\netcoreapp3.1\CommonUtilities.pdb

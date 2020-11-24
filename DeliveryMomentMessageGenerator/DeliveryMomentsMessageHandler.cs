@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models;
 using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandler;
 using System.Threading.Tasks;
+using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.CommonUtilities;
 
 namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGenerator
 {
     class DeliveryMomentsMessageHandler
     {
-        public static async Task PublishMessages(List<DeliveryMomentModel> deliveryMoments)
+        public static void PublishMessages(List<DeliveryMomentModel> deliveryMoments)
         {
             if (deliveryMoments != null && deliveryMoments.Count > 0)
             {
@@ -18,7 +19,11 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                     {
                         var deliveryMomentAsString = DeliveryMomentSerializer.Serialize(deliveryMoment);
                         DeliveryMomentConfluentMessageHandler deliveryMomentMessageHandler = new DeliveryMomentConfluentMessageHandler();
-                        await deliveryMomentMessageHandler.PublishDeliveryMomentMessage(deliveryMomentAsString);
+                        LogModel logModel = new LogModel(deliveryMoment.Id, "insert", deliveryMomentAsString);
+                        DeliveryMomentLogger.AddToLog(logModel);
+
+                        deliveryMomentMessageHandler.PublishDeliveryMomentMessage(deliveryMomentAsString);
+                        
                     }
                     catch (Exception ex)
                     {

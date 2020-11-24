@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.CommonUtilities;
 using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentReferenceServices;
 using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models;
 
@@ -127,6 +128,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                 {
                     var deliveryMoments = DeliveryMomentsCreator.PrepareDeliveryMoments(storeId, deliverySchedule, date, delivererNumber, wharehouseNumber, deliveryStreamName);
                     DeliveryMomentsMessageHandler.PublishMessages(deliveryMoments);
+                   
                 }
                 Console.WriteLine($"End GenerateDeliveryMomentsByDeliverer for Store Number : {storeId} with date {date} and delivererNumber {delivererNumber}");
             }

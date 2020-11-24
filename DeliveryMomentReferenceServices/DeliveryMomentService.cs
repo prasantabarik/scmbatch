@@ -46,7 +46,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentReferenceSer
 
                         using (var response = await client
                             .SendAsync(request, HttpCompletionOption.ResponseHeadersRead)
-                            .ConfigureAwait(false))
+                            .ConfigureAwait(true))
                         {
                             response.EnsureSuccessStatusCode();
                         }
