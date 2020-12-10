@@ -1,0 +1,15 @@
+﻿apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+spec:
+  type: pubsub.kafka
+  metadata:
+  - name: brokers
+    value: localhost:9192
+  - name: authRequired
+    value: false
+  - name: topics
+    value: deliverymomentmessage
+  - name: consumerGroup
+    value: DeliveryMomentBatchConsumer

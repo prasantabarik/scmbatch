@@ -18,12 +18,12 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
                     try
                     {
                         var deliveryMomentAsString = DeliveryMomentSerializer.Serialize(deliveryMoment);
-                        DeliveryMomentConfluentMessageHandler deliveryMomentMessageHandler = new DeliveryMomentConfluentMessageHandler();
-                        LogModel logModel = new LogModel(deliveryMoment.Id, "insert", deliveryMomentAsString);
+                        IDeliveryMomentMessageHandler deliveryMomentMessageHandler = new DeliveryMomentDaprMessageHandler();
+                        LogModel logModel = new LogModel(deliveryMoment.Id, "insert", deliveryMomentAsString, deliveryMoment.StoreNumber.ToString());
                         DeliveryMomentLogger.AddToLog(logModel);
 
-                        deliveryMomentMessageHandler.PublishDeliveryMomentMessage(deliveryMomentAsString);
-                        
+                        deliveryMomentMessageHandler.PublishDeliveryMomentMessageAsync(deliveryMomentAsString);
+
                     }
                     catch (Exception ex)
                     {

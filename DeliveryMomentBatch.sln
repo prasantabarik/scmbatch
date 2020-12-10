@@ -11,15 +11,24 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliveryMomentReferenceServ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliveryMomentReferenceModel", "DeliveryMomentReferenceModel\DeliveryMomentReferenceModel.csproj", "{54ED4991-999D-4BC5-AE6D-7363D685720D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryMomentMessageProcesser", "DeliveryMomentMessageProcesser\DeliveryMomentMessageProcesser.csproj", "{4932A05A-71C9-4211-950C-36492E6990AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliveryMomentMessageProcesser", "DeliveryMomentMessageProcesser\DeliveryMomentMessageProcesser.csproj", "{4932A05A-71C9-4211-950C-36492E6990AA}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{63188809-A1F9-4F95-BBA9-99E02479C9EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryMomentMessageHandler", "DeliveryMomentMessageHandler\DeliveryMomentMessageHandler.csproj", "{7ABDDA1B-9739-492D-A1A8-651995976B5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliveryMomentMessageHandler", "DeliveryMomentMessageHandler\DeliveryMomentMessageHandler.csproj", "{7ABDDA1B-9739-492D-A1A8-651995976B5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonogoDbClient", "MonogoDbClient\MonogoDbClient.csproj", "{A21F1CAE-2E54-45B3-AE2A-CF93E082C800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonogoDbClient", "MonogoDbClient\MonogoDbClient.csproj", "{A21F1CAE-2E54-45B3-AE2A-CF93E082C800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtilities", "CommonUtilities\CommonUtilities.csproj", "{D529C9E4-097F-439D-AB91-E71759FE0632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonUtilities", "CommonUtilities\CommonUtilities.csproj", "{D529C9E4-097F-439D-AB91-E71759FE0632}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDemo", "..\DaprDemo\DaprDemo.csproj", "{1A1EACE4-C5EE-4F6E-A40C-2D80656CDC03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryMomentProcesserApi", "..\DeliveryMomentProcesserApi\DeliveryMomentProcesserApi.csproj", "{B2341396-C0CD-4E62-8408-C2DE35A323DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB84D1BF-73EB-4644-BACC-8C8CDA18AE97}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +72,14 @@ Global
 		{D529C9E4-097F-439D-AB91-E71759FE0632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D529C9E4-097F-439D-AB91-E71759FE0632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D529C9E4-097F-439D-AB91-E71759FE0632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1EACE4-C5EE-4F6E-A40C-2D80656CDC03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1EACE4-C5EE-4F6E-A40C-2D80656CDC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1EACE4-C5EE-4F6E-A40C-2D80656CDC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1EACE4-C5EE-4F6E-A40C-2D80656CDC03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2341396-C0CD-4E62-8408-C2DE35A323DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2341396-C0CD-4E62-8408-C2DE35A323DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2341396-C0CD-4E62-8408-C2DE35A323DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2341396-C0CD-4E62-8408-C2DE35A323DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

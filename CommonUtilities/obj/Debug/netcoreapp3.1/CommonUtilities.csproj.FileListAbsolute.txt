@@ -6,4 +6,3 @@ C:\Nag\SCMMVP\Source\Repos\scmbatch\CommonUtilities\obj\Debug\netcoreapp3.1\Comm
 C:\Nag\SCMMVP\Source\Repos\scmbatch\CommonUtilities\obj\Debug\netcoreapp3.1\CommonUtilities.AssemblyInfo.cs
 C:\Nag\SCMMVP\Source\Repos\scmbatch\CommonUtilities\obj\Debug\netcoreapp3.1\CommonUtilities.dll
 C:\Nag\SCMMVP\Source\Repos\scmbatch\CommonUtilities\obj\Debug\netcoreapp3.1\CommonUtilities.pdb
-C:\Nag\SCMMVP\Source\Repos\scmbatch\CommonUtilities\obj\Debug\netcoreapp3.1\CommonUtilities.csprojAssemblyReference.cache

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandlerr;
+using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandler;
 using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentReferenceServices;
 using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models;
 

@@ -7,7 +7,7 @@ using System.Threading;
 using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentReferenceServices;
 using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.Models;
 
-namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandlerr
+namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandler
 {
     public class DeliveryMomentConfluentMessageListner
     {

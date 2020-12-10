@@ -1,0 +1,16 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+spec:
+  type: pubsub.azure.eventhubs
+  metadata:
+    - name: connectionString
+      value: Endpoint=sb://scmvmpdapr.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=FDGsszHFCkB8U77owAdOcWgs6KiwoFZdR2l0qfYuZxg=;EntityPath=deliverymomentmessage
+    - name: storageAccountName
+      value: scmmvpdaprdemostoarge
+    - name: storageAccountKey
+      value: NO8HM/c5uDv7GseischSI6eSRZkMQXdG0QA4OwllZAhQZrj48Fn2QT1VXMVtd8+mU/nBNHomtEy+4MxasKoDRQ==
+    - name: storageContainerName
+      value: deliverymomentbatchconsumer
+      

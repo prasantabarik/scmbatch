@@ -5,21 +5,18 @@ using TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.CommonUtilities;
 
 namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandler
 {
-    public class DeliveryMomentConfluentMessageHandler
+    public class DeliveryMomentKafkaMessageHandler : IDeliveryMomentMessageHandler
     {
-        public void PublishDeliveryMomentMessage(string message)
+        public void PublishDeliveryMomentMessageAsync(string message)
         {
-            Console.WriteLine("Start DeliveryMomentMessageHandler.PublishDeliveryMomentMessage()");
+            Console.WriteLine("Start DeliveryMomentConfluentMessageHandler.PublishDeliveryMomentMessage()");
 
             try
             {
-                string brokerList = "pkc-lq8gm.westeurope.azure.confluent.cloud:9092";
-                string topicName = "DeliveryMomentMessageProcesser";
+                string brokerList = "localhost:9192";
+                string topicName = "deliverymomentmessage";
                 var config = new ProducerConfig { BootstrapServers = brokerList };
-                config.SecurityProtocol = SecurityProtocol.SaslSsl;
-                config.SaslMechanism = SaslMechanism.Plain;
-                config.SaslUsername = "GHEF4JHYMYPE2EQV";
-                config.SaslPassword = "w9Z7vlY3RcWB3rD1Q1bgj/NmpDiopNHegNIFna6CQYamK6oOCRG/+yAXthdSNRJV";
+                
                 using (var deliveryMomentProducer = new ProducerBuilder<string, string>(config).Build())
                 {
                     try
@@ -29,7 +26,7 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandl
                         var deliveryReport = deliveryMomentProducer.ProduceAsync(
                             topicName, new Message<string, string> { Key = guid.ToString(), Value = message }).Result;
 
-                        
+
 
                         Console.WriteLine($" mesage: {guid} is delivered to: {deliveryReport.TopicPartitionOffset}");
                     }
@@ -41,9 +38,9 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageHandl
             }
             catch (Exception ex)
             {
-                Console.WriteLine("DeliveryMomentMessageHandler.PublishDeliveryMomentMessage() Error: " + ex.Message);
+                Console.WriteLine("DeliveryMomentConfluentMessageHandler.PublishDeliveryMomentMessage() Error: " + ex.Message);
             }
-            Console.WriteLine("End DeliveryMomentMessageHandler.PublishDeliveryMomentMessage()");
+            Console.WriteLine("End DeliveryMomentConfluentMessageHandler.PublishDeliveryMomentMessage()");
         }
     }
 }

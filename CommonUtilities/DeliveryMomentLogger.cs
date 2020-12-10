@@ -38,11 +38,13 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.CommonUtilities
     public class LogModel
     {
         public string Id { get; set; }
+        public string StoreNumber { get; set; }
         public string Opration { get; set; }
         public string Data { get; set; }
 
-        public LogModel(string id, string operation, string data)
+        public LogModel(string id, string operation, string data, string storeNumber)
         {
+            StoreNumber = storeNumber;
             Id = id;
             Opration = operation;
             Data = data;

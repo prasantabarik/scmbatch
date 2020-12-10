@@ -17,4 +17,8 @@
     <ProjectReference Include="..\DeliveryMomentReferenceServices\DeliveryMomentReferenceServices.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="components\" />
+  </ItemGroup>
+
 </Project>

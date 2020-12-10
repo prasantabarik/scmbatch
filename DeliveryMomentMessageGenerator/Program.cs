@@ -13,12 +13,12 @@ namespace TCS.MVP.DeliveryMoment.DeliveryMoment.Batch.DeliveryMomentMessageGener
         static void Main(string[] args)
         {
          
-          
             Console.WriteLine("Main() Start");
             DeliveryMomentLogger.StartLogs();
             GenerateDeliveryMoments();
             var logs = DeliveryMomentLogger.GetLogs();
-            Console.WriteLine("Main() End");
+
+            Console.WriteLine($"Total records processed is {logs.Count}. Main() End");
         }
 
         private static void GenerateDeliveryMoments()
